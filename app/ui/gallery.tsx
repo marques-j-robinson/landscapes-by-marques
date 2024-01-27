@@ -31,7 +31,7 @@ function Painting({filename, title}) {
 export default function Gallery() {
     return (
         <>
-            <main className="container mx-auto px-4">
+            <main className="container mx-auto px-4 mb-24">
                 <div className="grid grid-cols-3 gap-4">
                     {paintings.map(({filename, title}, index) => <Painting key={index} filename={filename} title={title} />)}
                 </div>
