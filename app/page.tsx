@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import HomepageGallery from "@/app/ui/gallery";
+
 export default function Home() {
   const pathname = usePathname();
   return (
     <>
-        <header className="container mx-auto px-4 mt-8">
+        <header className="container mx-auto px-4 mt-8 mb-4">
             <nav className="flex flex-row items-center space-between justify-between">
                 <Link href="/"><h1 className="text-4xl font-bold">Landscapes by Marques</h1></Link>
                 <ul>
@@ -17,6 +19,7 @@ export default function Home() {
                 </ul>
             </nav>
         </header>
+        <HomepageGallery />
     </>
   );
 }
