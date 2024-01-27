@@ -23,7 +23,7 @@ function Painting({filename, title}) {
                     sizes="500px 500px"
                 />
             </div>
-            <p className="text-center text-xl pt-2 uppercase">{title}</p>
+            <p className="text-center text-xl my-2 uppercase">{title}</p>
         </a>
     )
 }
@@ -32,7 +32,7 @@ export default function Gallery() {
     return (
         <>
             <main className="container mx-auto px-4">
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-3 gap-4">
                     {paintings.map(({filename, title}, index) => <Painting key={index} filename={filename} title={title} />)}
                 </div>
             </main>
