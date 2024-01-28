@@ -15,13 +15,13 @@ export default function GalleryDetail() {
     return (
         <>
             <h2 className="text-3xl font-bold mb-6">{painting.title}</h2>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
                 <Image alt={painting.title} src={painting.filename} width={500} height={500} />
-                <div>
-                    <p><strong>Description</strong></p>
-                    <p className="mb-4">{painting.description}</p>
+                <div className="mt-6 lg:mt-0">
                     <p><strong>Dimensions</strong></p>
-                    <p>{painting.dimensions}</p>
+                    <p className="mb-4">{painting.dimensions}</p>
+                    <p><strong>Description</strong></p>
+                    <p>{painting.description}</p>
                 </div>
             </div>
         </>

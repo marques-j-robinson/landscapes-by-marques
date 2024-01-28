@@ -16,12 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>Landscapes by Marques</title>
         </head>
-        <body className={inter.className}>
-            <header className="container mx-auto px-4 mt-8 mb-28">
-                <nav className="flex flex-row items-center space-between justify-between">
-                    <Link href="/"><h1 className="text-5xl font-bold">Landscapes by Marques</h1></Link>
+        <body className={`min-h-screen flex flex-col ${inter.className}`}>
+            <header className="container mx-auto px-4 mt-8 mb-12 sm:mb-28">
+                <nav className="flex flex-col sm:flex-row items-center space-between justify-between">
+                    <Link href="/"><h1 className="text-2xl md:text-4xl font-bold">Landscapes by Marques</h1></Link>
                     <ul className="flex flex-row">
                         <li className={`px-4 uppercase ${pathname === "/" ? "active" : ""}`}><Link href="/">Gallery</Link></li>
                         <li className={`px-4 uppercase ${pathname === "/blog" ? "active" : ""}`}><Link href="/blog">Blog</Link></li>
@@ -29,7 +30,7 @@ export default function RootLayout({
                     </ul>
                 </nav>
             </header>
-            <main className="container mx-auto px-4 mb-24">
+            <main className="flex-1 container mx-auto px-4 mb-24">
                 {children}
             </main>
             <footer className="border-t border-black pt-12">

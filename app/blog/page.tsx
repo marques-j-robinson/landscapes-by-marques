@@ -37,7 +37,7 @@ function Post({post}) {
 
 export default function Blog() {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {blogPosts.map(post => <Post key={post.id} post={post} />)}
     </div>
   );

@@ -32,7 +32,7 @@ function Painting({id, filename, title}) {
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {paintings.map(({id, filename, title}) => <Painting key={id} id={id} filename={filename} title={title} />)}
     </div>
   );

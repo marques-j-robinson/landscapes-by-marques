@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="grid grid-cols-2">
-        <Image alt="Profile picture" src="/about.png" width={250} height={100} />
-        <div>
+    <div className="grid grid-cols-1 md:grid-cols-2">
+        <Image className="w-full m-auto sm:m-0 sm:w-auto" alt="Profile picture" src="/about.png" width={250} height={100} />
+        <div className="mt-12 sm:mt-0">
             <p className="mb-2">Started painting in the “Alla Prima” technique after watching Bob Ross with some friends one evening in 2018. The way he mentioned that anyone could paint inspired me to try for myself. After seeing the magic, I started getting serious about the craft. Learning the nuances and gaining a clear understanding of how to create beautiful landscapes.</p>
             <p className="mb-2">Thus far I’ve gone through two phases.</p>
             <p className="mb-2">The first, a time of trial and error. Hands on learning with minimal material on small canvas just to get familiar with the basics. These are not glamorous, but I consider them my "Early Works".</p>
