@@ -5,17 +5,17 @@ import Link from "next/link";
 
 // TODO get these from database API
 const paintings = [
-    {filename: "/test.png", title: "test"},
-    {filename: "/test2.png", title: "test2"},
-    {filename: "/test3.png", title: "test3"},
-    {filename: "/test.png", title: "test"},
-    {filename: "/test2.png", title: "test2"},
-    {filename: "/test3.png", title: "test3"},
+    {id: 1, filename: "/test.png", title: "test"},
+    {id: 2, filename: "/test2.png", title: "test2"},
+    {id: 3, filename: "/test3.png", title: "test3"},
+    {id: 4, filename: "/test.png", title: "test"},
+    {id: 5, filename: "/test2.png", title: "test2"},
+    {id: 6, filename: "/test3.png", title: "test3"},
 ]
 
-function Painting({filename, title}) {
+function Painting({id, filename, title}) {
     return (
-        <a href="#">
+        <Link href={`/gallery/${id}`}>
             <div className="relative h-56">
                 <Image
                     className="painting object-cover w-full max-h-full"
@@ -26,14 +26,14 @@ function Painting({filename, title}) {
                 />
             </div>
             <p className="text-center text-xl my-2 uppercase">{title}</p>
-        </a>
+        </Link>
     )
 }
 
 export default function Home() {
   return (
     <div className="grid grid-cols-3 gap-4">
-        {paintings.map(({filename, title}, index) => <Painting key={index} filename={filename} title={title} />)}
+        {paintings.map(({id, filename, title}) => <Painting key={id} id={id} filename={filename} title={title} />)}
     </div>
   );
 }

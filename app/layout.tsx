@@ -21,7 +21,7 @@ export default function RootLayout({
         <body className={inter.className}>
             <header className="container mx-auto px-4 mt-8 mb-28">
                 <nav className="flex flex-row items-center space-between justify-between">
-                    <Link href="/"><h1 className="text-4xl font-bold">Landscapes by Marques</h1></Link>
+                    <Link href="/"><h1 className="text-5xl font-bold">Landscapes by Marques</h1></Link>
                     <ul className="flex flex-row">
                         <li className={`px-4 uppercase ${pathname === "/" ? "active" : ""}`}><Link href="/">Gallery</Link></li>
                         <li className={`px-4 uppercase ${pathname === "/blog" ? "active" : ""}`}><Link href="/blog">Blog</Link></li>
