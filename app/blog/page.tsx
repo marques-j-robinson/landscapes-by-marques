@@ -2,12 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { parse, format } from 'date-fns';
-
-function PublishedAt({dateString}) {
-    const date = parse(dateString, 'yyyy/MM/dd', new Date())
-    return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>;
-}
+import PublishedAt from '@/app/ui/date'
 
 // TODO get these from database API
 const blogPosts = [
